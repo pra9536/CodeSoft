@@ -38,7 +38,7 @@ public class CurrencyConverter {
 
             if (jsonObject.getBoolean("success")) {
                 BigDecimal result = BigDecimal.valueOf(jsonObject.getDouble("result"));
-                System.out.println("Converted Amount: " + result);
+                System.out.println("Converted Amount: " + result + " " + convertTo.toUpperCase());
             } else {
                 System.out.println("Error: " + jsonObject.getJSONObject("error").getString("info"));
             }
